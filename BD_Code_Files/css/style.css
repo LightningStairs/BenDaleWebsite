@@ -1,0 +1,250 @@
+/* CSS Reset */
+
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}table{border-collapse:collapse;border-spacing:0}
+
+/* Page Styles */
+
+body {
+
+	font-family: Futura; 
+	text-align: center;
+	letter-spacing: 10px;
+	font-weight: normal;
+	}
+
+/* Header & Navigation*/
+
+header {
+	font-family:Futura;
+  	text-align:center;
+  	font-weight:normal;
+ 	}
+
+ h1 {
+ 	font-weight: normal;
+ 	font-size: 3em;
+ 	margin-top: .5em;
+ 	}
+
+.mobile-only {
+    display: none;
+
+}
+
+#toggler {
+    display: none;
+}
+
+nav {
+    float: none;
+    margin-top: 1.5em;
+}
+nav li {
+    display: inline;
+}
+nav li a {
+    padding: 26px 2px;
+    color: #000;
+    display: inline-block;
+    text-decoration: none;
+}
+
+nav li a:visited {
+	color: #000;
+	text-decoration: none;
+	}
+
+nav li a:hover {
+	color: #01a9b4;
+	text-decoration: none;
+	}
+
+nav li a:active {
+	color: #000;
+	text-decoration: none;
+	}
+
+/* Portfolio Image Links*/
+
+#lk {
+	padding: 1.218em .8125em .8125em .8125em
+	}
+
+#zj {
+	padding: 1.218em .8125em .8125em .8125em
+	}
+
+#bs {
+	padding: 1.218em .8125em .8125em .8125em
+	}
+
+#oa {
+	padding: 1.218em .8125em .8125em .8125em
+	}
+	
+/* Footer */
+
+footer {
+    padding: 33px;
+	}
+
+footer li {
+    display: inline-block;
+	}
+
+footer h6 {
+	font-weight: normal;
+	font-size: 1.1em;
+	margin-top: .25em;
+	margin-bottom: 1em;
+    text-align: center;
+	}
+
+.soc-nav a img{
+	height: 3em;
+	width: 3em;
+	padding: 0px 15px;
+	margin-right: auto;
+    margin-left: auto;
+	}
+
+/* Carousel Styles */
+
+.carousel img {
+	border: 1px solid black;
+	margin-right: auto;
+    margin-left: auto;
+    margin-top: 1.875em;
+    max-width: 1150px;
+	}
+
+/* Previous and Next Arrows */
+
+.slick-prev {
+	background: url("../assets/prev.png");
+	width: 50px;
+	height: 50px;
+    display: block;
+	position: absolute;
+	left: 0;
+	top: 40%;
+	z-index: 1;
+	-webkit-appearance: none;
+	border: none;
+	text-indent: 799px;
+	overflow: hidden;
+}
+
+.slick-next {
+	background: url("../assets/next.png");
+	width: 50px;
+	height: 50px;
+    display: block;
+	position: absolute;
+	right: 0;
+	top: 40%;
+	z-index: 1;
+	-webkit-appearance: none;
+	border: none;
+	text-indent: 799px;
+	overflow: hidden;
+}
+
+/* Grid System */
+
+ .row {
+	clear: both;
+	padding: 0;
+	margin: 0 auto;
+	max-width: 1170px;
+}
+.row:after {
+	content: "";
+	clear: both;
+	height: 0;
+	visibility: hidden;
+	display: block;
+}
+.column {
+	float: left;
+	margin: 0 0 0 2.56%;
+	min-height: 1px;
+}
+.column:first-of-type { 
+	margin-left: 0;
+}
+.span_12_of_12 {
+	width: 100%;
+}
+.span_11_of_12 {
+  	width: 91.45%;
+}
+.span_10_of_12 {
+  	width: 82.90%;
+}
+.span_9_of_12 {
+  	width: 74.36%;
+}
+.span_8_of_12 {
+  	width: 65.81%;
+}
+.span_7_of_12 {
+  	width: 57.26%;
+}
+.span_6_of_12 {
+  	width: 48.72%;
+}
+.span_5_of_12 {
+  	width: 40.17%;
+}
+.span_4_of_12 {
+  	width: 31.62%;
+}
+.span_3_of_12 {
+  	width: 23.08%;
+}
+.span_2_of_12 {
+  	width: 14.53%;
+}
+.span_1_of_12 {
+  	width: 5.986%;
+}
+
+/* Mobile Breakpoint */
+
+@media screen and (max-width: 600px){
+    
+    .column, .column:first-child {
+        width: 100%;
+        margin: 1em 5%;
+    }
+
+    header nav {
+        text-align: center;
+        display: block;
+        font-size: 1.5em;
+        background-color: lightgrey;
+    }
+
+    header nav .row {
+    	border-top: solid .15em black;
+    	border-bottom: solid .15em black;
+    }
+
+    main img {
+    	display: inline-block;
+    	width: 100%;
+    	padding: 0em;
+    	margin-right: auto;
+    	margin-left: auto; 
+    }
+
+    .soc-nav a img{
+	height: 3em;
+	width: 3em;
+	padding: 0px 10px;
+	margin-right: auto;
+    margin-left: auto;
+	}
+
+}
