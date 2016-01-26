@@ -12,6 +12,11 @@ body {
 	font-weight: normal;
 	}
 
+
+.mobile-only {
+    display: none;
+	}
+
 /* Header & Navigation*/
 
 header {
@@ -26,28 +31,27 @@ header {
  	margin-top: .5em;
  	}
 
-.mobile-only {
-    display: none;
-
 }
 
 #toggler {
     display: none;
-}
+	}
 
 nav {
     float: none;
     margin-top: 1.5em;
-}
+	}
+
 nav li {
     display: inline;
-}
+	}
+
 nav li a {
     padding: 26px 2px;
     color: #000;
     display: inline-block;
     text-decoration: none;
-}
+	}
 
 nav li a:visited {
 	color: #000;
@@ -66,21 +70,22 @@ nav li a:active {
 
 /* Portfolio Image Links*/
 
-#lk {
-	padding: 1.218em .8125em .8125em .8125em
+  .gallery {
+    max-width: 100%;
+    height: auto;
+    width: auto\9; /* ie8 */
+    }
+
+    main img {
+    	border: solid black 1px;
+    }
+
+
+	#new {
+		margin-bottom: 21px;
 	}
 
-#zj {
-	padding: 1.218em .8125em .8125em .8125em
-	}
 
-#bs {
-	padding: 1.218em .8125em .8125em .8125em
-	}
-
-#oa {
-	padding: 1.218em .8125em .8125em .8125em
-	}
 	
 /* Footer */
 
@@ -133,7 +138,7 @@ footer h6 {
 	border: none;
 	text-indent: 799px;
 	overflow: hidden;
-}
+	}
 
 .slick-next {
 	background: url("../assets/next.png");
@@ -148,7 +153,7 @@ footer h6 {
 	border: none;
 	text-indent: 799px;
 	overflow: hidden;
-}
+	}
 
 /* Grid System */
 
@@ -157,58 +162,73 @@ footer h6 {
 	padding: 0;
 	margin: 0 auto;
 	max-width: 1170px;
-}
+	}
+
 .row:after {
 	content: "";
 	clear: both;
 	height: 0;
 	visibility: hidden;
 	display: block;
-}
+	}
+
 .column {
 	float: left;
 	margin: 0 0 0 2.56%;
 	min-height: 1px;
-}
+	}
+
 .column:first-of-type { 
 	margin-left: 0;
-}
+	}
+
 .span_12_of_12 {
 	width: 100%;
-}
+	}
+
 .span_11_of_12 {
   	width: 91.45%;
-}
+	}
+
 .span_10_of_12 {
   	width: 82.90%;
-}
+	}
+
 .span_9_of_12 {
   	width: 74.36%;
-}
+	}
+
 .span_8_of_12 {
   	width: 65.81%;
-}
+	}
+
 .span_7_of_12 {
   	width: 57.26%;
-}
+	}
+
 .span_6_of_12 {
   	width: 48.72%;
-}
+	}
+
 .span_5_of_12 {
   	width: 40.17%;
-}
+	}
+
 .span_4_of_12 {
   	width: 31.62%;
-}
+	}
+
 .span_3_of_12 {
   	width: 23.08%;
-}
+	}
+
 .span_2_of_12 {
   	width: 14.53%;
-}
+	}
+
 .span_1_of_12 {
   	width: 5.986%;
-}
+	}
 
 /* Mobile Breakpoint */
 
@@ -216,7 +236,7 @@ footer h6 {
     
     .column, .column:first-child {
         width: 100%;
-        margin: 1em 5%;
+        margin: 1em 0%;
     }
 
     header nav {
@@ -232,17 +252,24 @@ footer h6 {
     }
 
     main img {
-    	display: inline-block;
-    	width: 100%;
-    	padding: 0em;
-    	margin-right: auto;
-    	margin-left: auto; 
+    	border-top: solid black 1px;
+    	border-bottom: solid black 1px; 
+    	border-left: none;
+    	border-right: none;
     }
 
+    #lk {
+    	margin-top: 0em;
+    }
+   
+    #new {
+	margin-bottom: 0px;
+	}
+
     .soc-nav a img{
-	height: 3em;
-	width: 3em;
-	padding: 0px 10px;
+	height: 2.6em;
+	width: 2.6em;
+	padding: 0px 4px;
 	margin-right: auto;
     margin-left: auto;
 	}
