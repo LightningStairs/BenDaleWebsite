@@ -10,12 +10,11 @@ body {
 	text-align: center;
 	letter-spacing: 10px;
 	font-weight: normal;
+	width: 92.1875%;
+	margin-left: auto;
+  	margin-right: auto;
 	}
 
-
-.mobile-only {
-    display: none;
-	}
 
 /* Header & Navigation*/
 
@@ -31,7 +30,15 @@ header {
  	margin-top: .5em;
  	}
 
-}
+ h1 a{
+ 	text-decoration: none;
+ 	color: #000;
+ }
+
+
+.mobile-only {
+    display: none;
+	}
 
 #toggler {
     display: none;
@@ -39,7 +46,7 @@ header {
 
 nav {
     float: none;
-    margin-top: 1.5em;
+    margin-top: 1em;
 	}
 
 nav li {
@@ -51,6 +58,7 @@ nav li a {
     color: #000;
     display: inline-block;
     text-decoration: none;
+    margin: .5em;
 	}
 
 nav li a:visited {
@@ -70,19 +78,24 @@ nav li a:active {
 
 /* Portfolio Image Links*/
 
-  .gallery {
+  main {
+  	width: 99.57627%;
+  	margin-left: auto;
+  	margin-right: auto;
+  }
+ 
+ .gallery {
     max-width: 100%;
     height: auto;
     width: auto\9; /* ie8 */
     }
 
-    main img {
-    	border: solid black 1px;
+ main img {
+  	border: solid black 1px;
     }
 
-
-	#new {
-		margin-bottom: 21px;
+#new {
+	margin-bottom: 21px;
 	}
 
 
@@ -90,7 +103,7 @@ nav li a:active {
 /* Footer */
 
 footer {
-    padding: 33px;
+    padding: 33px 0px;
 	}
 
 footer li {
@@ -106,9 +119,9 @@ footer h6 {
 	}
 
 .soc-nav a img{
-	height: 3em;
-	width: 3em;
-	padding: 0px 15px;
+	height: 2.7em;
+	width: 2.7em;
+	padding: 0em .25em;
 	margin-right: auto;
     margin-left: auto;
 	}
@@ -119,9 +132,13 @@ footer h6 {
 	border: 1px solid black;
 	margin-right: auto;
     margin-left: auto;
-    margin-top: 1.875em;
-    max-width: 1150px;
+    margin-top: 1em;
+    max-width: 90%;
 	}
+
+.slick-slide {
+outline: none !important;
+}
 
 /* Previous and Next Arrows */
 
@@ -138,6 +155,7 @@ footer h6 {
 	border: none;
 	text-indent: 799px;
 	overflow: hidden;
+	outline: none !important;
 	}
 
 .slick-next {
@@ -153,6 +171,7 @@ footer h6 {
 	border: none;
 	text-indent: 799px;
 	overflow: hidden;
+	outline: none !important; 
 	}
 
 /* Grid System */
@@ -230,48 +249,135 @@ footer h6 {
   	width: 5.986%;
 	}
 
-/* Mobile Breakpoint */
+/* Zombie Jr. Nav Breakpoint */
+@media screen and (max-width: 1090px){
 
-@media screen and (max-width: 600px){
-    
-    .column, .column:first-child {
-        width: 100%;
-        margin: 1em 0%;
-    }
-
-    header nav {
-        text-align: center;
-        display: block;
-        font-size: 1.5em;
-        background-color: lightgrey;
-    }
-
-    header nav .row {
-    	border-top: solid .15em black;
-    	border-bottom: solid .15em black;
-    }
-
-    main img {
-    	border-top: solid black 1px;
-    	border-bottom: solid black 1px; 
-    	border-left: none;
-    	border-right: none;
-    }
-
-    #lk {
-    	margin-top: 0em;
-    }
-   
-    #new {
-	margin-bottom: 0px;
+.slick-prev {
+	background-image: none;
+	width: 350px;
+	height: 600px;
+    display: block;
+	position: absolute;
+	left: 0;
+	top: 10%;
+	z-index: 1;
+	-webkit-appearance: none;
+	border: none;
+	text-indent: 799px;
+	overflow: hidden;
+	outline: none !important;
 	}
 
-    .soc-nav a img{
-	height: 2.6em;
-	width: 2.6em;
+.slick-next {
+	background-image: none;
+	width: 350px;
+	height: 600px;
+    display: block;
+	position: absolute;
+	right: 0;
+	top: 10%;
+	z-index: 1;
+	-webkit-appearance: none;
+	border: none;
+	text-indent: 799px;
+	overflow: hidden;
+	outline: none !important; 
+	}
+
+
+}
+
+/* Mobile Breakpoint */
+
+@media screen and (max-width: 680px){
+
+
+.mobile-only {
+	display: block;
+	text-align: left;
+}
+
+#toggler {
+	display: block;
+	visibility: hidden;
+}
+
+.desktop-menu {
+	display: none;
+}
+
+header nav li {
+		text-align: left;
+		display: block;
+		border-top: 1px solid gray;
+		
+	}
+
+#oa-button {
+		text-align: left;
+		display: block;
+		border-top: 1px solid gray;
+		border-bottom: 1px solid gray;
+	}
+
+#about-button {
+		text-align: left;
+		display: block;
+		border-top: 0px;
+	}
+
+label[for="toggler"]{
+		padding: 26px 10px;
+		border-top: 1px solid gray;
+		border-bottom: 1px solid gray;
+	}
+
+label[for="toggler"] img {
+	float: right;
+}
+	
+#toggler ~ ul {
+		max-height: 0;
+		overflow: hidden;
+		transition: 1s;
+	}
+#toggler:checked ~ ul {
+		max-height: 100vh;
+}
+
+body {
+width: 100%;
+}
+
+.column, .column:first-child {
+width: 100%;
+margin: 1em 0%;
+}
+
+main img {
+	border-top: solid black 1px;
+	border-bottom: solid black 1px; 
+	border-left: none;
+	border-right: none;
+	width: 100%;
+}
+
+
+#lk {
+	margin-top: .5em;
+}
+
+#new {
+	margin-bottom: 0px;
+}
+
+.soc-nav a img{
+	height: 2.8em;
+	width: 2.8em;
 	padding: 0px 4px;
 	margin-right: auto;
     margin-left: auto;
-	}
-
 }
+
+
+
